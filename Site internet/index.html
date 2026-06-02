@@ -71,7 +71,29 @@
                         </button>
                     </div>
                 </div>
-    
+
+            <section class="formulaire">
+            <h2>Contactez-moi</h2>
+            <form method="get" action="#">
+                <fieldset class="identite">
+                    <p class="colonne-form">
+                        <label for="name">Nom</label>
+                        <input type="text" name="nom" id="name" placeholder="Votre Nom et Prénom...." required>
+                    </p>
+                    <p class="colonne-form">
+                        <label for="name">Rôle</label>
+                        <input type="text" name="rôle" id="name" placeholder="Votre Rôle ..." required>
+                    </p>                    
+                    <p class="colonne-form">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" id="mail" placeholder="Votre adresse email...." required>
+                    </p>
+                </fieldset>
+                <label for="message">Requête</label>
+                <textarea rows="10" id="message" name="message" placeholder="La requête que vous voulez envoyer...." required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
 
         <footer class="container-fluid bg-white fixed-bottom"><!--¨Pied de page-->
             <div class="d-flex justify-content-evenly"><!-- Pour que se soit bien réparti -->
