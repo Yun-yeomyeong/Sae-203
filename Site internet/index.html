@@ -14,51 +14,80 @@
     <body>
 
         <header>
-                <nav><!--Lien entre les différentes pages-->
+               <!-- <nav>   Lien entre les différentes pages
                     <a href="index.html" class="link" title="Lien vers la page d'Accueil">Accueil</a>
                     <a href="./Création_de_soirée.html" class="link" title="Lien vers la page ...">Créer un événement</a>
                     <a href="./Films.html" class="link" title="Lien vers la page ...">Nos films</a>
                     <a href="./Formulaire_de_demande.html" class="link" title="Lien vers la page ...">Demander un film</a>
+                </nav>-->
+
+            <div class="container-fluid bg-white fixed-top"><!-- Conteneur --><!-- Voir sujet -->
+                <nav class="navbar p-3 navbar-expand-lg" data-bs-theme="navbar-light"><!-- Menu de navigation -->
+                <!-- Marque (brand) du menu --><!-- Voir sujet -->
+                <a class="navbar link" href="./index.html" title="Lien vers la page d'Accueil">Accueil</a>       
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><!-- Bouton de bascule (toggler) -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu"><!-- Contenu du menu pouvant se réduire (collapse) -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><!-- Barre de navigation (nav)-->
+                        <li class="nav-item"><!-- Voir sujet -->
+                            <a class="active" href="./index_sujet - Modifs.html"><i class="bi bi-house me-1"></i>Accueil</a><!-- Voir sujet -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="disabled" href="#"><i class="bi bi-info-square me-1"></i>À propos de Ukulélé & Friends</a><!-- Voir sujet -->
+                        </li>
+                        <li class="nav-item"><!-- Voir sujet -->
+                            <a class="disabled" href="#"><i class="bi bi-images me-1"></i>Galerie d'images</a><!-- Voir sujet -->
+                        </li>
+                    </ul>
+                </div>
                 </nav>
+            </div>
         </header>
 
-        <h1>Bienvenue sur notre site !</h1><!--Titre principal de la page d'accueil-->
+        <div class="container-xxl bd-gutter mt-5 pt-5 my-md-4 bd-layout" id="trueBody">
+            <h1>Bienvenue sur notre site !</h1><!--Titre principal de la page d'accueil-->
 
-        <figure>
-            <blockquote class="blockquote"><!--Notre blockquote, le message des organisateurs-->
-                <p>
-                    Il est écrit : "Seul Link peut vaincre Ganon"
-                </p>
-            </blockquote>
+            <figure>
+                <blockquote class="blockquote"><!--Notre blockquote, le message des organisateurs-->
+                    <p>
+                        Il est écrit : "Seul Link peut vaincre Ganon"
+                    </p>
+                </blockquote>
 
-            <figcaption class="blockquote-footer"><!-- Pied de blockquote -->
-                <cite>Gwonam</cite>
-        </figure>
+                <figcaption class="blockquote-footer"><!-- Pied de blockquote -->
+                    <cite>Gwonam</cite>
+                </figcaption>
+            </figure>
 
-        <h2>Nos activitées</h2><!--La liste des activitées-->
-            <ul>
-                <li>Appéroooooooo !</li>
-                <li>Luge d’été</li>
-                <li>Film oklm</li>
-            </ul>
+            <h2>Nos activitées</h2><!--La liste des activitées-->
+                <ul>
+                    <li>Appéroooooooo !</li>
+                    <li>Luge d’été</li>
+                    <li>Film oklm</li>
+                </ul>
 
-                        <!-- Création d'un carrousel (choix 1)-->
-                <div class="col-lg-4 d-none d-lg-block"><!-- Voir sujet -->
+                        <!-- Création d'un carrousel-->
+                <div class="col-lg-4 d-block">
                     <div class="carousel slide carousel-fade" id="carouselPortrait" data-bs-theme="carousel-dark" data-bs-ride="carousel" data-bs-interval="3000"><!-- Début du carroussel --><!-- Voir sujet -->
-                        <div class="carousel-indicators"><!-- Indicateurs de carrousel --><!-- Voir sujet -->
+                        <div class="carousel-indicators"><!-- Indicateurs de carrousel -->
                             <button type="button" data-bs-target="#carouselPortrait" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Portrait 1"></button>
                             <button type="button" data-bs-target="#carouselPortrait" data-bs-slide-to="1" aria-label="Portrait 2"></button>
                             <button type="button" data-bs-target="#carouselPortrait" data-bs-slide-to="2" aria-label="Portrait 3"></button>
+                            <button type="button" data-bs-target="#carouselPortrait" data-bs-slide-to="3" aria-label="Portrait 4"></button>
                         </div>
-                        <div class="carousel-inner"><!-- Intérieur du carrousel --><!-- Voir sujet -->
-                            <div class="carousel-item active"><!-- Voir sujet -->
-                                <img src="./img/films/Joker.jpg" alt="Affiche du Joker" class="d-block width-100%"><!-- Voir sujet -->
+                        <div class="carousel-inner"><!-- Intérieur du carrousel -->
+                            <div class="carousel-item active">
+                                <img src="./img/films/Joker.jpg" alt="Affiche du Joker" class="d-block width-100%">
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/films/Leon.jpg" alt="Affiche de Leon" class="d-block width-100%"><!-- Voir sujet -->
+                                <img src="./img/films/Leon.jpg" alt="Affiche de Leon" class="d-block width-100%">
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/films/Rocky.jpg" alt="Affiche de Rocky" class="d-block width-100%"><!-- Voir sujet -->
+                                <img src="./img/films/Rocky.jpg" alt="Affiche de Rocky" class="d-block width-100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/films/Chat_Potté_2.jpg" alt="Affiche du Chat Potté 2" class="d-block width-100%">
                             </div>
                         </div>
                         <!-- Contrôle carrousel (précédent) -->
@@ -72,15 +101,44 @@
                     </div>
                 </div>
 
+            <section class="formulaire mt-4 pd-3">
+            <div class="container-fluid d-flex justify-content-evenly">
+            <h2>Contactez-moi :</h2>
+
+                <form method="get" action="#">
+                    <fieldset class="identite">
+                        <p class="colonne-form">
+                            <label for="name">Nom</label>
+                            <input type="text" name="nom" id="name" placeholder="Votre Nom et Prénom...." required>
+                        </p>
+                        <p class="colonne-form">
+                            <label for="name">Rôle</label>
+                            <input type="text" name="rôle" id="name" placeholder="Votre Rôle ..." required>
+                        </p>
+                        <p class="colonne-form">
+                            <label for="mail">Email</label>
+                            <input type="email" name="mail" id="mail" placeholder="Votre adresse email...." required>
+                        </p>
+                    </fieldset>
+
+                    <label for="message">Requête</label>
+                    <textarea rows="10" id="message" name="message" placeholder="La requête que vous voulez envoyer...." required></textarea>
+                    <input type="submit" value="Envoyer">
+                </form>
+
+            </div>
+            </section>
+
+            </div>
 
         <footer class="container-fluid bg-white fixed-bottom"><!--¨Pied de page-->
             <div class="d-flex justify-content-evenly"><!-- Pour que se soit bien réparti -->
                 <a class="p-1" href="index.html"><img src="#" alt="Logo de notre site" class="img-fluid"></a><!--Notre logo, cliquable pour revenir au début de la page d'accueil-->
                 <p class="fw-bold" href="./Mention_Légale.html">Mentions légales</p><!-- lien vers les mentions légales -->
                 <div class="p-1"><!-- div avec images et lien vers nos réseaux -->
-                    <!-- Voir sujet -->
+                    
                     <a href="https://discord.gg/BwSvDdaqD" title="Lien vers notre Discord" target="_blank" class="link-dark fs-3"><i class="bi bi-discord"></i></a><!-- lien vers nos résaux -->
-                    <!-- Voir sujet -->
+                    
                     <a href="https://www.instagram.com/vie.etudiante.tarbes/?hl=fr" title="Lien vers Instagram" target="_blank" class="link-dark fs-3 ms-2"><i class="bi bi-instagram"></i></a><!-- lien vers nos résaux -->
                 </div>
             </div>
