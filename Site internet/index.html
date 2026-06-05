@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
 
+<!--https://icons.getbootstrap.com = Icones Bootstrap-->
+
     <body>
 
         <header>
@@ -31,24 +33,52 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><!-- Bouton de bascule (toggler) -->
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <!-- Menu déroulant des autres pages-->
+                    
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><!-- Bouton de bascule (toggler) -->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div class="collapse navbar-collapse" id="menu"><!-- Contenu du menu pouvant se réduire (collapse) -->
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><!-- Barre de navigation (nav)-->
-                            <li class="nav-item">
-                                <a class="active" href="./index.html"><i class="bi bi-house me-1"></i>Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="disabled" href="#"><i class="bi bi-info-square me-1"></i>À propos de Ukulélé & Friends</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="disabled" href="#"><i class="bi bi-images me-1"></i>Galerie d'images</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="collapse navbar-collapse" id="menu"><!-- Contenu du menu pouvant se réduire (collapse) -->
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><!-- Barre de navigation (nav)-->
+                                <li class="nav-item">
+                                    <a class="active me-4" href="./index.html"><i class="bi bi-house me-1"></i>Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="active  me-4" href="./Création_de_soirée.html"><i class="bi bi-info-square me-1"></i>Créer une soirée</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="active  me-4" href="./Films.html"><i class="bi bi-film me-1"></i>Films</a>
+                                </li>
+                            </ul>
+                        </div>
+                    <!--</div> Toggler menu-->
+
+                        <!--Menu déroulant des Filtres <div id="togglerFiltres"> id="filtres"-->
+                    
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#filtres"><!-- Bouton de bascule (toggler) -->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="filtres">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                <label class="form-check-label" for="checkDefault">
+                                    Default checkbox
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
+                                <label class="form-check-label" for="checkChecked">
+                                    Checked checkbox
+                                </label>
+                            </div>
+                        </div>
+                        
+                    <!--</div> Fin Toggler filtres-->
+
+                </div><!--Fin du conteneur lié à navbar-->
             </nav>
         </header>
 
@@ -132,7 +162,7 @@
                 <div class="container-fluid d-flex justify-content-evenly">
                     <h2>Contactez-moi :</h2>
 
-                    <form method="get" action="#">
+                    <form class="pb-5 mb-3" method="get" action="#">
                         <fieldset class="identite">
                             <p class="colonne-form">
                                 <label for="name">Nom</label>
@@ -152,7 +182,7 @@
 
                         <label for="message">Requête</label>
                         <textarea rows="10" id="message" name="message" placeholder="La requête que vous voulez envoyer...." required></textarea>
-                        <input type="submit" value="Envoyer">
+                        <button class="btn btn-outline-primary" type="submit">Envoyer</button>
                     </form>
 
                 </div>
@@ -160,39 +190,10 @@
 
         </div>
 
-                <h1>Login</h1>
-        <form action="submit_login.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <br><br>
-            <input type="submit" value="Login">
-        </form>
-
-        <br>
-        <hr>
-
-
-        <h1>Création de compte</h1>
-        <form action="crea_compte.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="new_username">
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="new_password">
-            <br><br>
-            <button type="submit">Créer un compte</button>
-        </form> 
-        <br>
-        <br>
-        <br>
-
         <footer class="container-fluid bg-white fixed-bottom"><!--¨Pied de page-->
             <div class="d-flex justify-content-evenly"><!-- Pour que se soit bien réparti -->
-                <a class="p-1" href="index.html"><img src="#" alt="Logo de notre site" class="img-fluid"></a><!--Notre logo, cliquable pour revenir au début de la page d'accueil-->
-                <p class="fw-bold" href="./Mention_Légale.html">Mentions légales</p><!-- lien vers les mentions légales -->
+                <a class="p-1 pt-2" href="index.html"><img src="#" alt="Logo de notre site" class="img-fluid"></a><!--Notre logo, cliquable pour revenir au début de la page d'accueil-->
+                <a class="active pt-2 me-4" href="./Mention_Légale.html">Mentions légales</a><!-- lien vers les mentions légales -->
 
                 <div class="p-1"><!-- div avec images et lien vers nos réseaux -->
                     
