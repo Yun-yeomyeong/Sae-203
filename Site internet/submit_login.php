@@ -1,30 +1,37 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "test";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect("localhost", "root", "", "test");
 
-// Check connection
-if ($conn->connect_error) {
-  die("C'est la mierda: " . $conn->connect_error);
+if (!$conn) {
+    die("Erreur de connexion : " . mysqli_connect_error());
 }
 
-//check du mdp et username
-$username = $_POST['username'];
-$password = $_POST['password'];
+$sql = "SELECT * FROM comptes WHERE username = ?";
 
-$sql = "SELECT * FROM comptes WHERE username = '$username'";
-$result = $conn->query($sql);
-$user = $result->fetch_assoc();
+$stmt = mysqli_prepare($conn, $sql);
 
-if ($user && $password === $user['password']) {
-    header("Location: https://angusnicneven.com/");
-    exit;
+if ($stmt) {
+    $username = $_POST['username'];
+
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+    mysqli_stmt_close($stmt);
+
+    $passwordHash = sha1($_POST['password']);
+
+    if ($user && $passwordHash === $user['password']) {
+        header("Location: https://angusnicneven.com/");
+        exit;
+    } else {
+        echo "Identifiants incorrects";
+    }
+
 } else {
-    echo "Identifiants incorrects";
+    echo "Erreur lors de la préparation de la requête.";
 }
 
+mysqli_close($conn);
 ?>
