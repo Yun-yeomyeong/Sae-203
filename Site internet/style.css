@@ -1,12 +1,13 @@
 body::before { /*Test pour le fond*/
+
     content: "";
     position: fixed;
     inset: 0;
     background: url("./img/stars.jpg") center/cover no-repeat;
-    filter: blur(3px);
     opacity: 0.95;
 	filter : brightness(0.6);
     z-index: -1;
+
 }
 
 h1, p, cite, h2, ul{
@@ -21,3 +22,26 @@ h1, p, cite, h2, ul{
     object-fit: cover;
     max-height: 180px;
 }
+
+
+.collapse a, .Search, .filtres{             /* Fond + couleur texte blanc */
+
+    background-image: url("https://i.pinimg.com/736x/fd/cd/2d/fdcd2d93de5c539ff196c34991a457ca.jpg");
+    background-size: cover;
+    color: white;
+
+}
+
+.btn {                                      /* Animation de zoom */
+
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.btn:hover {                                /* Animation de zoom au survol*/
+
+    transform: scale(1.05);
+    color: white;
+
+}
+
