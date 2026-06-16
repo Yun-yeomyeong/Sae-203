@@ -1,4 +1,5 @@
 body::before { /*Test pour le fond*/
+
     content: "";
     position: fixed;
     inset: 0;
@@ -7,10 +8,75 @@ body::before { /*Test pour le fond*/
     opacity: 0.95;
 	filter : brightness(0.6);
     z-index: -1;
+
 }
 
+/*----*/
+
 h1, p, cite, h2, ul{
+
     color: white;
+
+}
+
+
+h1 {
+
+    margin-bottom: 1.5rem;
+
+}
+
+h2 {
+
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.02em;
+
+}
+
+/*----*/
+
+figure {
+
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    padding: 1.2rem 1.4rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.text-layout {
+    
+    padding: 1rem 0;
+
+}
+
+.text-card {
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 1.4rem 1.5rem;
+
+}
+
+.text-card h5 {
+
+    margin-bottom: 0.75rem;
+
+}
+
+.text-card p {
+
+    margin: 0 0 1rem;
+
+}
+
+/*----*/
+
+.blockquote-footer {
+    color: #d1f7ff;
 }
 
 .carousel-item img {
