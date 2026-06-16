@@ -21,7 +21,14 @@ h1, p, cite, h2, ul{
     object-fit: contain;
     max-height: 500px;
 }
-.collapse a, .Search, .filtres{             /* Fond + couleur texte blanc */
+
+.carousel-indicators button.active {
+    background-color: #00FFFF;
+    opacity: 1;
+}
+
+
+.collapse a, .Search, .filtres {             /* Fond + couleur texte blanc */
 
     background-image: url("https://i.pinimg.com/736x/fd/cd/2d/fdcd2d93de5c539ff196c34991a457ca.jpg");
     background-size: cover;
@@ -32,12 +39,179 @@ h1, p, cite, h2, ul{
 .btn {                                      /* Animation de zoom */
 
     transition: transform 0.2s ease-in-out;
+    color: white
 
 }
 
-.btn:hover {                                /* Animation de zoom au survol*/
+.btn:hover, footer a:hover {                                /* Animation de zoom au survol*/
 
     transform: scale(1.05);
     color: white;
 
 }
+
+footer.footer .active {
+    background-image: url("https://i.pinimg.com/736x/fd/cd/2d/fdcd2d93de5c539ff196c34991a457ca.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+footer.footer .btn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+footer i {
+    font-size: 1.5rem;
+}
+
+/* ===== SECTION FORMULAIRE ===== */
+
+
+
+.formulaire {
+
+    position: relative;
+    padding: 60px 40px;
+    margin: 40px 0;
+}
+
+.formulaire h2 {
+
+    padding : 40px;
+
+}
+
+/* Conteneur du formulaire */
+.formulaire form {
+
+    position: relative;
+
+    z-index: 1;
+
+    background: rgba(32, 32, 48, 0.395);
+
+    padding: 30px 50px;
+
+    margin-top: 4%;
+
+    border-radius: 15px;
+    
+    backdrop-filter: blur(10px);
+
+}
+
+/* Labels */
+
+.formulaire label {
+
+    color: white;
+
+    display: block;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    font-weight: 500;
+
+    font-size: 1rem;
+    
+}
+
+/* Inputs et textarea - Style général */
+.formulaire input[type="text"],
+.formulaire input[type="role"],
+.formulaire input[type="email"]{
+
+    width: 100%;
+
+    padding: 12px;
+    padding-right: 300px;
+    
+    background: rgba(30, 30, 50, 0.8);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    color: white;
+
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+
+.formulaire textarea {
+
+    width: 100%;
+
+    padding: 12px;
+    padding-right: 300px;
+
+    background: rgba(30, 30, 50, 0.8);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: white;
+
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+
+.formulaire input[type="text"]:focus,
+.formulaire input[type="role"]:focus,
+.formulaire input[type="email"]:focus,
+.formulaire textarea:focus {
+
+    background: rgba(30, 30, 50, 0.95);
+    border-color: #00FFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.1);
+
+}
+
+/* Textarea */
+.formulaire textarea {
+
+    margin-bottom: 25px;
+    resize: vertical;
+    min-height: 80px;
+    
+}
+
+/* Bouton Envoyer */
+.formulaire button {
+
+    background: rgba(30, 30, 50, 0.5);
+
+    color: white;
+    
+    border: 1px solid rgba(53, 88, 78, 0.5);
+
+    padding: 12px 40px;
+    border-radius: 20px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    
+}
+
+.formulaire button:hover {
+    
+    background: rgba(30, 30, 50, 0.95);
+    border-color: #00FFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.1);
+
+    transform: scale(1.05);
+}
+
