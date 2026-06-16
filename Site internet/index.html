@@ -28,15 +28,17 @@
                 </nav>-->
 
 
-        <nav class="navbar p-4 navbar-expand-lg" data-bs-theme="navbar-light"><!-- Menu de navigation -->
+        <nav class="navbar p-4 navbar-expand-lg" data-bs-theme="navbar-dark"><!-- Menu de navigation -->
 
             <div class="container-fluid bg-dark fixed-top justify-content-evenly pt-2 pb-2"><!-- Conteneur -->
 
-                <a class="navbar-brand link text-white" href="./index.html" title="Lien vers la page d'Accueil">Accueil</a>
+                <a class="navbar-brand link text-white" href="./index.html"
+                    title="Lien vers la page d'Accueil">Accueil</a>
 
                 <form class="d-flex" role="search"><!--Barre de recherche et boutton submit-->
 
-                    <input class="form-control me-2 h-auto w-100" type="search" placeholder="Rechercher" aria-label="Search" />
+                    <input class="form-control me-2 h-auto w-100" type="search" placeholder="Rechercher"
+                        aria-label="Search" />
                     <button class="btn border border-1 border-dark Search" type="submit rounded-2">Search</button>
 
                 </form>
@@ -213,31 +215,28 @@
         </div>
 
         <section class="formulaire mt-4 pd-3">
-            <div class="container-fluid d-flex justify-content-evenly">
-                <h2>Contactez-moi :</h2>
 
-                <form class="pb-5 mb-3" method="get" action="#">
-                    <fieldset class="identite">
-                        <p class="colonne-form">
-                            <label for="name">Nom</label>
-                            <input type="text" name="nom" id="name" placeholder="Votre Nom et Prénom...." required>
-                        </p>
+            <h2>Contactez-moi :</h2>
 
-                        <p class="colonne-form">
-                            <label for="name">Rôle</label>
-                            <input type="text" name="rôle" id="name" placeholder="Votre Rôle ..." required>
-                        </p>
+            <div class="d-flex justify-content-evenly">
 
-                        <p class="colonne-form">
-                            <label for="mail">Email</label>
-                            <input type="email" name="mail" id="mail" placeholder="Votre adresse email...." required>
-                        </p>
-                    </fieldset>
+                <form class="pb-5 mb-3 colonne-form" method="get" action="#">
+
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                    <label for="role">Rôle</label>
+                    <input type="text" id="role" name="role" placeholder="Votre rôle" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
 
                     <label for="message">Requête</label>
                     <textarea rows="10" id="message" name="message" placeholder="La requête que vous voulez envoyer...."
-                        required></textarea>
-                    <button class="btn btn-outline-primary" type="submit">Envoyer</button>
+                        required> </textarea>
+
+                    <button type="submit">Envoyer</button>
+                    
                 </form>
 
             </div>
@@ -245,24 +244,26 @@
 
     </div>
 
-    <footer class="container-fluid bg-white fixed-bottom"><!--¨Pied de page-->
+    <footer class="container-fluid bg-dark text-white fixed-bottom footer"><!--¨Pied de page-->
 
-        <div class="d-flex justify-content-evenly"><!-- Pour que se soit bien réparti -->
+        <div class="d-flex justify-content-evenly align-items-center"><!-- Pour que se soit bien réparti -->
 
-            <a class="btn p-1 pt-2" href="index.html"><img src="#" alt="Logo de notre site"
+            <a class="btn border border-1 border-dark active p-1" href="index.html"><img src="#" alt="Logo de notre site"
                     class="img-fluid"></a><!--Notre logo, cliquable pour revenir au début de la page d'accueil-->
 
-            <a class="active pt-2 me-4" href="./Mention_Légale.html">Mentions
+            <a class="btn border border-1 border-dark active pt-2 me-4" href="./Mention_Légale.html">Mentions
                 légales</a><!-- lien vers les mentions légales -->
 
             <div class="p-1"><!-- div avec images et lien vers nos réseaux -->
 
-                <a href="https://discord.gg/BwSvDdaqD" title="Lien vers notre Discord" target="_blank"
-                    class="link-dark fs-3"><i class="bi bi-discord"></i></a><!-- lien vers nos résaux -->
+                <a class="btn p-2 me-2 text-white" href="https://discord.gg/BwSvDdaqD" title="Lien vers notre Discord" target="_blank">
+                    <i class="bi bi-discord"></i>
+                </a><!-- lien vers nos résaux -->
 
-                <a href="https://www.instagram.com/vie.etudiante.tarbes/?hl=fr" title="Lien vers Instagram"
-                    target="_blank" class="link-dark fs-3 ms-2"><i
-                        class="bi bi-instagram"></i></a><!-- lien vers nos résaux -->
+                <a class="btn p-2 text-white" href="https://www.instagram.com/vie.etudiante.tarbes/?hl=fr" title="Lien vers Instagram"
+                    target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a><!-- lien vers nos résaux -->
 
             </div>
 
